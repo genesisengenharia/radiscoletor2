@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <string-array name="main_settings" translatable="false">
+        <item>Formulários</item>
+        <item>Configurações</item>
+        <item>Administração</item>
+        <item>Mapas</item>
+    </string-array>
+</resources>
