@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/rl"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_marginBottom="0dp"
+	android:layout_marginLeft="0dp"
+	android:layout_marginRight="0dp"
+	android:layout_marginTop="0dp"
+	android:orientation="vertical"
+	android:padding="0dp" >
+
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:id="@+id/row1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="30dp"
+				android:gravity="center_vertical" >
+
+				<RelativeLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="50"
+					android:gravity="center" >
+
+					<ImageButton
+						android:id="@+id/upload_forms"
+						android:layout_width="150dp"
+						android:layout_height="150dp"
+						android:background="@drawable/state_color"
+						android:src="@drawable/sobe"
+						android:layout_alignParentTop="true"
+						android:layout_centerHorizontal="true">
+					</ImageButton>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:clickable="false"
+						android:text="Enviar Formulários"
+						android:id="@+id/textView"
+						android:layout_alignParentBottom="true"
+						android:layout_centerHorizontal="true" />
+				</RelativeLayout>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/row2"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="30dp"
+				android:gravity="center_vertical" >
+
+				<RelativeLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="50"
+					android:gravity="center" >
+
+					<ImageButton
+						android:id="@+id/upload_rotas"
+						android:layout_width="150dp"
+						android:layout_height="150dp"
+						android:background="@drawable/state_color"
+						android:src="@drawable/sobe"
+						android:layout_alignParentTop="true"
+						android:layout_centerHorizontal="true">
+					</ImageButton>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:clickable="false"
+						android:text="Enviar Rotas"
+						android:layout_alignParentBottom="true"
+						android:layout_centerHorizontal="true" />
+				</RelativeLayout>
+			</LinearLayout>
+
+
+
+
+		</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>
