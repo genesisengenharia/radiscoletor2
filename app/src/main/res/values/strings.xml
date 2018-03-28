@@ -385,5 +385,7 @@
     <string name="title_activity_go_instance_chooser_list">GoInstanceChooserList</string>
     <string name="polygon_clear_msg">Apagar a geometria?</string>
     <string name="btn_clear">APAGAR</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
 
 </resources>

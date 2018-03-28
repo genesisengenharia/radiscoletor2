@@ -30,7 +30,7 @@ public class UpdateMapActivity extends Activity {
     public static final int progress_bar_type = 0;
 
     // File url to download
-    private static String file_url = "http://projetoradisunb.com.br/aplicativo/MapaBase.mbtiles";
+    private static String file_url = "http://104.196.14.229/eclips/base/MapaBase.mbtiles";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

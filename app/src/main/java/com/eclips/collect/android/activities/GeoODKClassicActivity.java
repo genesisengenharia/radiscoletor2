@@ -123,7 +123,7 @@ public class GeoODKClassicActivity extends Activity {
 			}
 		});
 
-		ImageButton geoodk_receive_but = (ImageButton) findViewById(R.id.update_mapas);
+		/*ImageButton geoodk_receive_but = (ImageButton) findViewById(R.id.update_mapas);
 		geoodk_receive_but.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -136,7 +136,7 @@ public class GeoODKClassicActivity extends Activity {
 //				atualizaApp.execute("http://54.200.155.200/eclips/2346/aplicativo/eclipscollect.apk");
 			}
 		});
-
+*/
 		ImageButton geoodk_delete_but = (ImageButton) findViewById(R.id.geoodk_delete_data_butt);
 		geoodk_delete_but.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -147,6 +147,7 @@ public class GeoODKClassicActivity extends Activity {
 				startActivity(i);
 			}
 		});
+
 
 
 		//End of Main activity

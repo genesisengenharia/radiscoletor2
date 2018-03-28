@@ -29,6 +29,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.eclips.collect.android.R;
 import com.eclips.collect.android.application.Collect;
@@ -44,9 +45,9 @@ import com.eclips.collect.android.utilities.VersionHidingCursorAdapter;
  * @author Yaw Anokwa (yanokwa@gmail.com)
  * @author Carl Hartung (carlhartung@gmail.com)
  */
-public class FormChooserList extends ListActivity implements DiskSyncListener {
+public class LoginChooser extends ListActivity implements DiskSyncListener {
 
-    private static final String t = "FormChooserList";
+    private static final String t = "LoginChooser";
     private static final boolean EXIT = true;
     private static final String syncMsgKey = "syncmsgkey";
 
@@ -67,15 +68,15 @@ public class FormChooserList extends ListActivity implements DiskSyncListener {
         }
 
         setContentView(R.layout.chooser_list_layout);
-        setTitle(getString(R.string.app_name) + " > " + getString(R.string.enter_data));
+        setTitle(getString(R.string.app_name) + " > " + getString(R.string.login));
 
         String sortOrder = FormsColumns.DISPLAY_NAME + " ASC, " + FormsColumns.JR_VERSION + " DESC";
-        //Cursor c = managedQuery(FormsColumns.CONTENT_URI, null, null, null, sortOrder);
+        //Cursor c = managedQuery(FormsColumns.CONTENT_URI, null, null, isLogin, sortOrder);
         Cursor c = managedQuery(FormsColumns.CONTENT_URI,
-                null,
-                FormsColumns.DISPLAY_NAME + " not like ? AND " + FormsColumns.DISPLAY_NAME + " not like ? ",
-                new String[] {"%login%","%logout%"},
-                sortOrder );
+                                null,
+                                FormsColumns.DISPLAY_NAME + " like ? OR " + FormsColumns.DISPLAY_NAME + " like ? ",
+                                new String[] {"%login%","%Login%"},
+                                sortOrder );
 
         String[] data = new String[] {
                 FormsColumns.DISPLAY_NAME, FormsColumns.DISPLAY_SUBTEXT, FormsColumns.JR_VERSION
@@ -83,6 +84,7 @@ public class FormChooserList extends ListActivity implements DiskSyncListener {
         int[] view = new int[] {
                 R.id.text1, R.id.text2, R.id.text3
         };
+
 
         // render total instance view
         SimpleCursorAdapter instances =
@@ -164,6 +166,7 @@ public class FormChooserList extends ListActivity implements DiskSyncListener {
             // caller wants to view/edit a form, so launch formentryactivity
             startActivity(new Intent(Intent.ACTION_EDIT, formUri));
         }
+//        Toast.makeText(getApplicationContext(), "formUri:" + formUri.toString(), Toast.LENGTH_LONG).show();
 
         finish();
     }

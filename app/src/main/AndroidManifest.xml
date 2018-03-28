@@ -168,6 +168,36 @@
                 <data android:mimeType="vnd.android.cursor.dir/vnd.geoodk.form" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.eclips.collect.android.activities.LoginChooser"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+                <action android:name="android.intent.action.PICK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.geoodk.form" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.eclips.collect.android.activities.LogoutChooser"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+                <action android:name="android.intent.action.PICK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.geoodk.form" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".activities.FormManagerList"
             android:label="@string/app_name" />
@@ -220,6 +250,16 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.eclips.collect.android.activities.UpdateMapActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.eclips.collect.android.activities.LoginActivity"/>
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -308,10 +348,20 @@
         <activity
             android:name="com.eclips.collect.android.preferences.PreferencesActivity"
             android:label="@string/app_name">
-        <intent-filter>
-            <action android:name="com.eclips.collect.android.preferences.PreferencesActivity" />
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="com.eclips.collect.android.preferences.PreferencesActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.eclips.collect.android.preferences.LoginPreferencesActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.eclips.collect.android.preferences.PreferencesActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
 

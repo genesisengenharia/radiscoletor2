@@ -776,7 +776,7 @@ public class GeoPointMapNewActivity extends Activity implements IRegisterReceive
         alertDialog.setTitle("Selecionar Camada de Fundo");
         offilineOverlays = getOfflineLayerList(); // Maybe this should only be done once. Have not decided yet.
         //alertDialog.setItems(list, new  DialogInterface.OnClickListener() {
-        alertDialog.setSingleChoiceItems(offilineOverlays,selected_layer,new  DialogInterface.OnClickListener() {
+        alertDialog.setSingleChoiceItems(MapHelper.getOfflineLayerList(),selected_layer,new  DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
                 switch(item){
                     case 0 :
@@ -789,7 +789,7 @@ public class GeoPointMapNewActivity extends Activity implements IRegisterReceive
                     default:
                         layerStatus = true;
                         mapView.getOverlays().remove(mbTileOverlay);
-                        String mbFilePath = getMBTileFromItem(item);
+                        String mbFilePath = MapHelper.getMBTileFromItem(item);
                         File mbFile = new File(mbFilePath);
                         mbprovider = new MBTileProvider(GeoPointMapNewActivity.this, mbFile);
                         int newMaxZoomLevel = mbprovider.getMaximumZoomLevel();

@@ -45,7 +45,9 @@ public class UpdateURLActivity extends Activity {
 
         setContentView(R.layout.update_activity);
 
-        Toast.makeText(getApplicationContext(), "Atualizando: " + user + "/" + arq, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Atualizando: " +
+//                user +
+                "/" + arq, Toast.LENGTH_LONG).show();
 
         DownloadFileFromURL downURL = new DownloadFileFromURL();
         downURL.execute(arq, user);

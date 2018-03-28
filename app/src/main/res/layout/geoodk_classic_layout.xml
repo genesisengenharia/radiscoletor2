@@ -137,60 +137,6 @@
 				android:layout_marginBottom="30dp"
 				android:gravity="center_vertical" >
 
-				<RelativeLayout
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_weight="50"
-					android:gravity="center_horizontal" >
-
-					<ImageButton
-						android:id="@+id/rotas"
-						android:layout_width="100dp"
-						android:layout_height="100dp"
-						android:background="@drawable/state_color"
-						android:src="@drawable/trackg"
-						android:gravity="center_horizontal"
-						android:baselineAlignBottom="false"
-						android:adjustViewBounds="true"
-						android:alpha="0.3">
-					</ImageButton>
-
-					<TextView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:layout_below="@+id/rotas"
-						android:clickable="false"
-						android:layout_marginLeft="35dp"
-						android:text="Rotas"
-						android:gravity="center_horizontal"
-						android:alpha="0.3" />
-				</RelativeLayout>
-
-				<RelativeLayout
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_weight="50"
-					android:gravity="center" >
-
-					<ImageButton
-						android:id="@+id/update_mapas"
-						android:layout_width="100dp"
-						android:layout_height="100dp"
-						android:background="@drawable/state_color"
-						android:src="@drawable/cloud_down"
-						android:gravity="center_horizontal"
-						android:alpha="1">
-					</ImageButton>
-
-					<TextView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:layout_below="@+id/update_mapas"
-						android:layout_marginLeft="7dp"
-						android:clickable="false"
-						android:text="Receber Dados"
-						android:alpha="1" />
-				</RelativeLayout>
 			</LinearLayout>
 			<LinearLayout
 				android:id="@+id/row3"
@@ -247,6 +193,16 @@
 						android:clickable="false"
 						android:text="Configurações" />
 				</RelativeLayout>
+			</LinearLayout>
+
+			<LinearLayout
+			android:id="@+id/row5"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="30dp"
+			android:gravity="center_vertical" >
+
+
 			</LinearLayout>
 
 
